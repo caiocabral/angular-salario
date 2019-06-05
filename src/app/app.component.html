@@ -1,0 +1,52 @@
+<div id="app">
+  <div class="row">
+    <img
+      src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/1200px-Angular_full_color_logo.svg.png"
+      width="50px"
+    />
+    <h3>Cálculo de salário com Angular.js</h3>
+  </div>
+
+  <div class="content">
+    <div class="mainContent">
+      <h3>Cálculo em tempo real</h3>
+
+      <label>Salário bruto:</label>
+      <input
+        [(ngModel)]="salarioBruto"
+        (keyup)="updateSalario($event.target.value)"
+        currency
+      />
+
+      <label>Base INSS:</label>
+      <input [(ngModel)]="salario.baseINSS" currency disabled />
+
+      <label>Desconto INSS:</label>
+      <input [(ngModel)]="salario.descontoINSS" currency disabled />
+
+      <label>Base IRPF:</label>
+      <input [(ngModel)]="salario.baseIRPF" currency disabled />
+
+      <label>Desconto IRPF:</label>
+      <input [(ngModel)]="salario.descontoIRPF" currency disabled />
+
+      <label>Salário líquido:</label>
+      <input [(ngModel)]="salario.salarioLiquido" currency disabled />
+    </div>
+
+    <div class="sideContent">
+      <h3>Cálculo reverso com Observables</h3>
+
+      <label>Salário líquido desejado:</label>
+      <input
+        [(ngModel)]="salarioLiquidoDesejado"
+        (keyup)="updateSalarioLiquidoDesejado($event.target.value)"
+        currency
+      />
+
+      <button (click)="findSalarioBrutoFromLiquido()">
+        Calcular salário bruto
+      </button>
+    </div>
+  </div>
+</div>

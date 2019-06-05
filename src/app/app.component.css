@@ -1,0 +1,45 @@
+ul {
+  text-align: center;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 0 auto;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.mainContent {
+  border: 1px solid gray;
+  padding: 10px;
+  margin-right: 30px;
+  width: 50%;
+}
+
+.sideContent {
+  border: 1px solid gray;
+  padding: 10px;
+  margin-right: 30px;
+  width: 50%;
+}
+
+input,
+span {
+  display: block;
+  width: 100%;
+  font-size: 1.2em;
+}
+
+input {
+  margin-bottom: 10px;
+}
